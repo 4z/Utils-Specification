@@ -1,0 +1,61 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/schemas/v3.0/schema.json#",
+  "info": {
+    "license": {
+      "url": "https://raw.githubusercontent.com/4z/Utils-Specification/master/LICENSE",
+      "name": "MIT"
+    },
+    "title": "Http Error Response Schema",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "Error": {
+        "title": "Error Response",
+        "description": "Object Error Response",
+        "type": "object",
+        "required": [
+          "error"
+        ],
+        "properties": {
+          "error": {
+            "type": "object",
+            "required": [
+              "message",
+              "statusCode"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name error"
+              },
+              "message": {
+                "type": "string",
+                "description": "the traditional error message, which should be kept short and all single line"
+              },
+              "statusCode": {
+                "type": "string",
+                "description": "the status code of the error, defaulting to `500`"
+              },
+              "status": {
+                "type": "string",
+                "description": "the status code of the error, mirroring `statusCode` for general compatibility",
+                "nullable": true
+              },
+              "meta": {
+                "type": "object",
+                "description": "can be an object of header names to values to be sent to the client, defaulting to `undefined`. When defined, the key names should all be lower-cased",
+                "nullable": true
+              },
+              "stack": {
+                "type": "string",
+                "description": "In debug mode is used to print the stack error. This always is `undefined` in production",
+                "nullable": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
