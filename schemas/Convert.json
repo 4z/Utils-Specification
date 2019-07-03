@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Convert",
+  "description": "Used to convert to parse files.",
+  "additionalItems": false,
+  "additionalProperties": false,
+  "required": [
+    "properties"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "description": {
+      "type": "string",
+      "description": "Describes the use of the schema"
+    },
+    "properties": {
+      "type": "object",
+      "description": "Define the properties to transform",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": true,
+        "description": "Title used to refer to the name of the column.",
+        "required": [
+          "title",
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Define the transformation mechanism. You can use null, boolean, integer, number, json, string.",
+            "enum": [
+              "null",
+              "boolean",
+              "integer",
+              "number",
+              "json",
+              "string"
+            ]
+          },
+          "title": {
+            "title": "string",
+            "description": "Set the title used to obtain the value as a reference."
+          }
+        }
+      }
+    }
+  }
+}
