@@ -34,6 +34,8 @@
             "description": "Define the transformation mechanism. You can use null, boolean, integer, number, json, string.",
             "enum": [
               "null",
+              "date",
+              "date-time",
               "boolean",
               "integer",
               "number",
