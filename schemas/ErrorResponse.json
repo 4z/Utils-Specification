@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/schemas/v3.0/schema.json#",
+  "$schema": "https://raw.githubusercontent.com/4z/Utils-Specification/master/schemas/OpenAPI-3-0-2019-04-02.json#",
   "info": {
     "license": {
       "url": "https://raw.githubusercontent.com/4z/Utils-Specification/master/LICENSE",
