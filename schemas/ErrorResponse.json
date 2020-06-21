@@ -47,6 +47,11 @@
                 "description": "can be an object of header names to values to be sent to the client, defaulting to `undefined`. When defined, the key names should all be lower-cased",
                 "nullable": true
               },
+              "headers": {
+                "type": "object",
+                "description": "can be an object of header names to values to be sent to the client, defaulting to `undefined`. When defined, the key names should all be lower-cased",
+                "nullable": true
+              },
               "stack": {
                 "type": "string",
                 "description": "In debug mode is used to print the stack error. This always is `undefined` in production",
